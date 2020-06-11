@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useWebSockets = url => {
   const [data, setValue] = useState([]);
+
   useEffect(() => {
     try {
       const socket = new WebSocket(url);
