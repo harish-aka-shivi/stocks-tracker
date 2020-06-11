@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './home.css';
+import { useHistory } from 'react-router-dom';
+import moment from 'moment';
 import Table from '../../components/Table';
-import useStocksWS from '../../hooks/useStocksWS';
 import { HEADINGS, PRETTY_NAME } from '../../constants';
+import { DataContext } from '../providers/DataProvider';
 
 const headings = Object.keys(HEADINGS);
 
 const Home = () => {
-  const data = useStocksWS();
-
+  const history = useHistory();
+  const { pricesByKey: data } = useContext(DataContext);
   return (
     <div className="home-root">
       <div className="home-responsive-container">
@@ -28,12 +30,22 @@ const Home = () => {
               <Table.TRow
                 key={key}
                 color={data[key].color}
+                onClick={() => history.push(`/${key}`)}
               >
-                {headings.map(heading => (
-                  <Table.TD>
-                    {data[key][heading]}
-                  </Table.TD>
-                ))}
+                {headings.map(heading => {
+                  if (heading === HEADINGS.lastUpdate) {
+                    return (
+                      <Table.TD>
+                        {moment(data[key][heading]).startOf('second').fromNow()}
+                      </Table.TD>
+                    );
+                  }
+                  return (
+                    <Table.TD>
+                      {data[key][heading]}
+                    </Table.TD>
+                  );
+                })}
               </Table.TRow>
             ))}
           </Table.TBody>
