@@ -13,10 +13,13 @@
 - Code structure is using component/container. Components are logic-less react components and container are logic-full
 - Using React's Context API for passing the fetched data across the app using `DataProvider`
 - Table Component is made using Compound Component Structure.
+- Using Local Storage to save the last 11 prices for each stock
 
-Issue
+# Issues
 - Right now, websocket is not loading data over https. Need to figure that out.
+  - Its happening because of browser security features. It does not let the `ws` to load  over `https`. One solution I can think of using our own server to fetch the data over insecure websocket and sending the data over ssl using custom websocket connection from our server.
 - Github pages deployed is facing some issue, So I have an alternate deployment link on vercel. Need to figure that out
+
 
 # Links
 - https://harish-aka-shivi.github.io/stocks-tracker/
