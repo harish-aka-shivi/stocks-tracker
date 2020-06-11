@@ -73,7 +73,15 @@ const useStocksWS = () => {
     setSavedMapping(savedMappingTemp);
     setPricesByKey(pricesByKeyCalc);
     setPreviousSocketMessage(data);
-  }, [data, pricesByKey, previousSocketMessage, savedMapping]);
+  }, [
+    data,
+    pricesByKey,
+    previousSocketMessage,
+    savedMapping,
+    setSavedMapping,
+    setPricesByKey,
+    setPreviousSocketMessage,
+  ]);
 
   return {
     pricesByKey,

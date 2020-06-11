@@ -15,7 +15,7 @@ const useWebSockets = url => {
     } catch (e) {
       setValue([]);
     }
-  }, []);
+  }, [url]);
   return data;
 };
 
