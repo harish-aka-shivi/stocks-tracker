@@ -14,7 +14,7 @@
 - Using React's Context API for passing the feched data across the app using `DataProvider`
 - Table Component is made using Compound Component Structure.
 
-Issue
+# Issues
 - Right now, websocket is not loading data over https. Need to figure that out.
 - Github pages deployed is facing some issue, So I have an alternate deployment link on vercel. Need to figure that out
 
