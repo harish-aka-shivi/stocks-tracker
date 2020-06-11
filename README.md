@@ -1,5 +1,5 @@
 # Description
-- Make an stocks tracking app which gets data from websockets
+- Make an stocks tracking app which gets data from WebSocket
 
 # Used technologies
 - Use client rendering using React Js to render the website
@@ -10,8 +10,8 @@
 
 # Technical choices
 - Abstract out not UI related logic to custom hooks. So there are hooks like useWebSocket to fetch the data
-- Code strucutre is using component/container. Components are logic-less react components and container are logic-fulll
-- Using React's Context API for passing the feched data across the app using `DataProvider`
+- Code structure is using component/container. Components are logic-less react components and container are logic-full
+- Using React's Context API for passing the fetched data across the app using `DataProvider`
 - Table Component is made using Compound Component Structure.
 
 Issue
@@ -21,3 +21,8 @@ Issue
 # Links
 - https://harish-aka-shivi.github.io/stocks-tracker/
 - https://stocks-tracker.now.sh/
+
+# Screenshots
+![Alt text](/screenshots/1.png? "Optional Title")
+
+![Alt text](/screenshots/2.png? "Optional Title")
