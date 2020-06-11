@@ -15,7 +15,7 @@ const Detail = () => {
     const yPointsTemp = savedMapping[ticker].price.map(item => item.price);
     setLabels(labelsTemp);
     setYPoints(yPointsTemp);
-  }, savedMapping);
+  }, savedMapping, setLabels, setYPoints);
 
   const data = {
     labels,
