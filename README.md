@@ -13,6 +13,7 @@
 - Code strucutre is using component/container. Components are logic-less react components and container are logic-fulll
 - Using React's Context API for passing the feched data across the app using `DataProvider`
 - Table Component is made using Compound Component Structure.
+- Using Local Storage to save the last 11 prices for each stock
 
 # Issues
 - Right now, websocket is not loading data over https. Need to figure that out.
